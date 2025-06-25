@@ -53,4 +53,10 @@ const appendBook = (newBook) => {
   setBooks([...books, newBook]);
 };
 
-export default BookList; //export so other files can acess to
+return (
+  <div>
+    {books.map((book) => (
+      <BookCard key={book.id} book={book} />
+    ))}
+  </div>
+);
