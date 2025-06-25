@@ -2,34 +2,29 @@ import React, {useState} from "react";
 import { createRoot } from "react-dom/client";
 import "./style.css";
 import AddBook from "./components/AddBook";
-import BookList from "./components/BookList";
+import BookCard from "./components/BookCard";
+import SearchField from "./components/searchBar";
+import BookList, { defaultBookList } from "./components/BookList";
 
 const App = () => {
-  const initialBookState = [
-    { id: 1, title: "Babel" },
-    { id: 2, title: "Hour of Spirits"},
-    { id: 3, title: "Crime and Punishment"},
-  ];
 
-  const [books, setBooks] = useState(initialBookState);
+  const [books, setBooks] = useState(defaultBookList);
 
-  const appendBook = (newBookTitle) => {
-    const newBook = {
-      id: books.length +1,
-      title: newBookTitle,
-    };
-    setBooks([...books, newBook]);
+  const appendBook = (newBook) => {
+    setBooks([...books, { ...newBook, id: books.length + 1 }]);
   };
+
+  const [query, setQuery] = useState("");
+  const filteredBooks = books.filter(book =>
+  (book.title || "").toLowerCase().includes(query.toLowerCase())
+);
 
   return (
     <div className="app">
       <h1 className="title">React Forms! 📝</h1>
+      <SearchField query={query} setQuery={setQuery}/>
       <AddBook appendBook={appendBook}/>
-      {/*<BookList />*/}
-      {books.map(book => (
-        <li key ={book.id}>{book.title}
-        </li>
-      ))}
+      <BookList books={filteredBooks}/>
     </div>
   );
 };
