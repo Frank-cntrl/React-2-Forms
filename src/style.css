@@ -41,10 +41,16 @@ body {
   width: 100%;
 }
 
+.new-book-form {
+  background-color: antiquewhite;
+  border-radius: 10px;
+  padding: 10px;
+}
+
 .new-book-form *{
   color: Black;
 }
 
-.error{
+.error, .required{
   color: red;
 }
