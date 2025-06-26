@@ -9,7 +9,8 @@ const BookCard = ({ book }) => {
       />
       <div className = "book-card-text">
       <h4 className="book-title">{book.title || "Untitled Book"}</h4>
-      <p className="book-rating">Rating: {book.rating}</p>
+      <p className = "categoroy">Category: {book.category}</p>
+      <p className="book-rating">Rating: {[book.rating, "/5"]}</p>
       <p className="favorite">Favorite: {book.isFavorite ? "Yes" : "No"}</p>
       <p>Finished Read: {book.isRead ? "Yes" : "No"}</p>
       <p>Date Publised: {book.datePublished}</p>

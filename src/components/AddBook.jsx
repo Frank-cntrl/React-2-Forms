@@ -140,7 +140,7 @@ const AddBook = ({appendBook}) => {
             <label className = "description" htmlFor="description">Description:</label>
             <textarea name="description"
                 id="description"
-                rows={1}
+                rows={2}
                 cols={15}
                 placeholder="Description"
                 onChange={handleDescriptionChange}
