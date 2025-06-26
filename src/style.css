@@ -65,7 +65,7 @@ body {
 
 .book-card {
   width: 200px;
-  height: 350px;
+  height: auto;
   border-radius: 10px;
   overflow: hidden;
   margin: 1rem;
@@ -81,14 +81,18 @@ body {
   color: black;
   text-align: center;
   padding: 10px;
+  padding-bottom: 0;
   word-break: break-word;
   overflow: hidden;
 }
 
-.book-rating {
-  margin: 10 px;
+.book-rating, .book-author {
   font-size: 14px;
   color: #555555;
+}
+
+.book-rating {
+  margin: 10 px;
 }
 
 .book-link {
