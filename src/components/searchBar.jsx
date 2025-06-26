@@ -23,5 +23,5 @@ return (
     </div>
 )
 };
-//yes or no or yes
+//yes
 export default searchField;
