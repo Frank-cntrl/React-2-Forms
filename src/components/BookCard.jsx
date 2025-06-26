@@ -4,7 +4,7 @@ const BookCard = ({ book }) => {
   return (
     <div className="book-card">
       <img
-        src={book.image}
+        src={book.imageURL}
         alt={book.title}
       />
       <h4 className="book-title">{book.title || "Untitled Book"}</h4>
