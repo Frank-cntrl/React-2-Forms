@@ -4,7 +4,7 @@ import BookCard from "./BookCard";
 export const defaultBookList = [
   {
     id: 1,
-    image:
+    imageURL:
       "https://m.media-amazon.com/images/I/91OmD3UsE0L._UF1000,1000_QL80_.jpg",
     title: "Babel",
     rating: 4,
@@ -14,7 +14,7 @@ export const defaultBookList = [
   },
   {
     id: 2,
-    image:
+    imageURL:
       "https://m.media-amazon.com/images/I/81vo4l29fhL._UF1000,1000_QL80_.jpg",
     title: "The Book of Radom",
     rating: 8,
@@ -24,9 +24,9 @@ export const defaultBookList = [
   },
   {
     id: 3,
-    image:
+    imageURL:
       "https://m.media-amazon.com/images/I/81vo4l29fhL._UF1000,1000_QL80_.jpg",
-    title: "You",
+    titleURL: "You",
     rating: 9,
     Author: "Caroline Kepnes",
     isRead: true,
@@ -34,7 +34,7 @@ export const defaultBookList = [
   },
   {
     id: 4,
-    image: "https://images.booksense.com/images/866/064/9780439064866.jpg",
+    imageURL: "https://images.booksense.com/images/866/064/9780439064866.jpg",
     title: "Harry Potter",
     rating: 10,
     Author: "J.K. Rowling",

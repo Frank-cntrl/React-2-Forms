@@ -22,8 +22,8 @@ const App = () => {
   return (
     <div className="app">
       <h1 className="title">React Forms! 📝</h1>
-      <SearchField query={query} setQuery={setQuery}/>
       <AddBook appendBook={appendBook}/>
+      <SearchField query={query} setQuery={setQuery}/>
       <BookList books={filteredBooks}/>
     </div>
   );

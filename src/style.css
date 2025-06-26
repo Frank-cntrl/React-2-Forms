@@ -47,7 +47,7 @@ body {
 
 .book-card {
   width: 200px;
-  height: 350px;
+  height: fit-content;
   border-radius: 10px;
   overflow: hidden;
   margin: 1rem;
@@ -79,10 +79,30 @@ body {
   color: #007bff;
 }
 
+.search-bar{
+  padding-top: 50px;
+}
+
 .search-bar-text{
   color: black;
 }
 
-.submi-form *{
-  color: white;
+.submit-form *{
+  color: green;
+  text-align: center;
+}
+
+.create-book{
+  color: black;
+}
+
+.description *{
+  margin-top: 30px;
+}
+
+.book-card-text *{
+  color: black;
+  font-size: 14px;
+  word-break: break-word;
+  overflow: hidden;
 }

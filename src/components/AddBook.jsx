@@ -92,6 +92,7 @@ const AddBook = ({appendBook}) => {
 
     return (
       <div className = "submit-form">
+        <h1>CREATE A NEW ENTRY</h1>
         <form onSubmit={handleSubmit} className="new-book-form">
             <label className="label" htmlFor="title">
                 <span className="required">*</span>Title:
@@ -136,10 +137,10 @@ const AddBook = ({appendBook}) => {
             />
             <br />
 
-            <label htmlFor="description">Description:</label>
+            <label className = "description" htmlFor="description">Description:</label>
             <textarea name="description"
                 id="description"
-                rows={3}
+                rows={1}
                 cols={15}
                 placeholder="Description"
                 onChange={handleDescriptionChange}
@@ -217,7 +218,7 @@ const AddBook = ({appendBook}) => {
             <input name="isFavorite" id="favoriteFlag" type="checkbox" onChange={handleFavoriteChange} checked={isFavorite}></input>
             <br />
 
-            <button>Create Book</button>
+            <button className = "create-book">Create Book</button>
         </form>
       </div>
     );
