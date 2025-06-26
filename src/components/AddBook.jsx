@@ -13,56 +13,38 @@ import React, {useState} from "react";
  * - isFavorite (boolean, default false)
  */
 
-const AddBook = ({appendBook}) => {
+const AddBook = ({ books, appendBook }) => {
     const [title, setTitle] = useState("");
+    const handleTitleChange = (event) => setTitle(event.target.value);
+
     const [author, setAuthor] = useState("");
+    const handleAuthorChange = (event) => setAuthor(event.target.value);
+
     const [imageURL, setImageURL] = useState("");
+    const handleImageURLChange = (event) => setImageURL(event.target.value);
+
     const [publishedDate, setPublishedDate] = useState("");
+    const handlePublishedDateChange = (event) => setPublishedDate(event.target.value);
+
     const [description, setDescription] = useState("");
+    const handleDescriptionChange = (event) => setDescription(event.target.value);
+
     const [rating, setRating] = useState(0);
+    const handleRatingChange = (event) => setRating(Number(event.target.value));
+
     const [category, setCategory] = useState("");
+    const handleCategoryChange = (event) => setCategory(event.target.value);
+
     const [isRead, setIsRead] = useState(false);
+    const handleReadChange = (event) => setIsRead(event.target.checked);
+
     const [isFavorite, setIsFavorite] = useState(false);
-    
-    const handleTitleChange = (event) => {
-        setTitle(event.target.value);
-    };
-    
-    const handleAuthorChange = (event) => {
-        setAuthor(event.target.value);
-    }
-
-    const handleImageURLChange = (event) => {
-        setImageURL(event.target.value);
-    }
-
-    const handlePublishedDateChange = (event) => {
-        setPublishedDate(event.target.value);
-    }
-
-    const handleDescriptionChange = (event) => {
-        setDescription(event.target.value);
-    }
-
-    const handleRatingChange = (event) => {
-        setRating(Number(event.target.value));
-    }
-
-    const handleCategoryChange = (event) => {
-        setCategory(event.target.value);
-    }
-
-    const handleReadChange = (event) => {
-        setIsRead(event.target.checked);
-    }
-
-    const handleFavoriteChange = (event) => {
-        setIsFavorite(event.target.checked);
-    }
+    const handleFavoriteChange = (event) => setIsFavorite(event.target.checked);
     
     const handleSubmit = (event) =>{
         event.preventDefault();
         const newBook = {
+            id: books.length + 1,
             title: title,
             author: author,
             imageURL: imageURL,
@@ -91,7 +73,7 @@ const AddBook = ({appendBook}) => {
     };
 
     return (
-      <div className = "submit-form">
+        <div className="add-book-form">
         <form onSubmit={handleSubmit} className="new-book-form">
             <label className="label" htmlFor="title">
                 <span className="required">*</span>Title:
@@ -219,7 +201,7 @@ const AddBook = ({appendBook}) => {
 
             <button>Create Book</button>
         </form>
-      </div>
+        </div>
     );
 };
 
