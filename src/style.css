@@ -29,11 +29,29 @@ body {
   color: #ffffff;
 }
 
+.gif-card {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 1rem;
+}
+
+.gif-card img {
+  width: 100%;
+}
+
+.new-book-form {
+  background-color: antiquewhite;
+  border-radius: 10px;
+  padding: 10px;
+}
+
 .new-book-form *{
   color: Black;
 }
 
-.error{
+.error, .required{
   color: red;
 }
 
@@ -63,14 +81,18 @@ body {
   color: black;
   text-align: center;
   padding: 10px;
+  padding-bottom: 0;
   word-break: break-word;
   overflow: hidden;
 }
 
-.book-rating {
-  margin: 10 px;
+.book-rating, .book-author {
   font-size: 14px;
   color: #555555;
+}
+
+.book-rating {
+  margin: 10 px;
 }
 
 .book-link {
